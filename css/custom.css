@@ -1,0 +1,31 @@
+/* custom.css */
+@import "tailwindcss";
+.form-switch {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: #cbd5e0;
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  .form-switch::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 9999px;
+    transition: transform 0.2s;
+  }
+  .form-switch:checked {
+    background-color: #10b981; /* green-500 */
+  }
+  .form-switch:checked::before {
+    transform: translateX(1.25rem);
+  }
